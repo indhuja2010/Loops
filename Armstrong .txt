@@ -1,0 +1,43 @@
+Armstrong 
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        long n=sc.nextLong();
+        int count=0;
+        long sum=0;
+        long b=n;
+        while(n!=0)
+        {
+            count++;
+            n=n/10;
+        }
+        n=b;
+        while(n!=0)
+        {
+            long rem1=n%10;
+            long fact=1;
+            for(int i=0;i<count;i++){
+                fact=fact*rem1;
+            }
+            sum+=fact;
+            n=n/10;
+        }
+        if(b==sum)
+        {
+            System.out.print("Armstrong number");
+        }
+        else
+        {
+            System.out.print("Not an Armstrong number");
+        }
+    }
+}

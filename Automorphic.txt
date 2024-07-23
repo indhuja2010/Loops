@@ -1,0 +1,37 @@
+Automorphic 
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int a=sc.nextInt();
+	    int sqrt=a*a;
+	    int c=0,t=a,b=0;
+	    while(a!=0){
+	        a=a/10;
+	        c++;
+	    }
+	    a=t;
+	    for(int i=0;i<c;i++){
+	        b=b*10+sqrt%10;
+	        sqrt=sqrt/10;
+	    }
+	    int d=0;
+	    while(b!=0){
+	        d=d*10+b%10;
+	        b=b/10;
+	    }
+	    if(t==d){
+	        System.out.print("Yes");
+	    }
+	    else{
+	        System.out.print("No");
+	    }
+	}
+}
